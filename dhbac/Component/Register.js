@@ -1,10 +1,11 @@
 import { StatusBar } from 'expo-status-bar';
 import {
   StyleSheet, Text, View, TextInput, TouchableOpacity,
-  KeyboardAvoidingView, ImageBackground
+  KeyboardAvoidingView, ImageBackground,Platform
 } from 'react-native';
 import React from 'react';
 import Icon from 'react-native-vector-icons/FontAwesome';
+
 
 function Register({ navigation }) {
   return (

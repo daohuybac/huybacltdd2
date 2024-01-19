@@ -1,16 +1,16 @@
 import React from 'react';
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, Image } from 'react-native';
-import Search from './Search';
+//import Search from './Search';
 
 export default function Header() {
 
     return (
         
         <View style={styles.header}>
-            <View style={styles.text}>
+            {/* <View style={styles.text}>
                 <Text style={styles.title}>Welcome </Text>
-            </View>
+            </View> */}
 
             <StatusBar style="auto" />
 
@@ -21,9 +21,9 @@ export default function Header() {
                 />
             </View>
             
-            <View style={styles.search}>
+            {/* <View style={styles.search}>
                 <Search></Search>
-            </View>
+            </View> */}
         </View>
     );
 }
@@ -32,7 +32,7 @@ const styles = StyleSheet.create({
     header: {
         backgroundColor: '#fff',
         alignItems: 'center',
-        paddingTop: 30,
+        //paddingTop: 30,
         paddingBottom: 0,
         //borderBottomWidth: 1,
         //borderBottomColor: '#ccc',

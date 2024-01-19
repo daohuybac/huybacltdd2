@@ -4,9 +4,16 @@ import { useRoute } from '@react-navigation/native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { CartContext } from './CartContent';
 
+
 const SingleProductScreen = () => {
   const route = useRoute();
+ 
   const { product } = route.params;
+///////thêm thông báo giỏ hàng 
+ const handlePress = () => {
+  alert("Thêm vào giỏ hàng thành công!");
+};
+/////////////
   const [quantity, setQuantity] = useState(1);
   const { updateCartItemCount } = useContext(CartContext);
   useEffect(() => {
@@ -15,8 +22,9 @@ const SingleProductScreen = () => {
         const cartItemsData = await AsyncStorage.getItem('cartItems');
         const existingCartItems = cartItemsData ? JSON.parse(cartItemsData) : [];
         console.log('Existing Cart Items:', existingCartItems);
+       
       } catch (error) {
-        console.log('Error loading cart items:', error);
+        
       }
     };
 
@@ -51,6 +59,8 @@ const SingleProductScreen = () => {
       updateCartItemCount(updatedCartItemCount); // Cập nhật số lượng sản phẩm trong giỏ hàng trong context
 
       console.log('Mua hàng:', product.title, 'Số lượng:', quantity);
+      /////thêm thông báo giỏ hàng 
+      alert("Thêm vào giỏ hàng thành công!");
     } catch (error) {
       console.log('Error saving cart items:', error);
     }

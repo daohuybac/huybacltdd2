@@ -19,7 +19,7 @@ export default function App() {
         
         <NavigationContainer>
 
-          <Stack.Navigator initialRouteName="Login">
+          <Stack.Navigator initialRouteName="HomeScreen">
           <Stack.Screen
               name="Login"
               component={Login}
@@ -36,15 +36,15 @@ export default function App() {
               name="HomeScreen"
               component={HomeScreen}
               options={{
-                headerTitle: 'FAPAS STORE',
+                headerTitle: 'CLOHES STORE',
                 headerTitleStyle: {
-                  fontSize: 30,
+                  fontSize: 20,
                   fontWeight: 'bold',
-                  color: '#808080', // Mã màu hex cho xám
+                  color: '#FFFF33', // Mã màu hex cho xám
                   textShadowColor: 'black', // Mã màu CSS cho đen
                   textShadowOffset: { width: -2, height: 2 }, // Độ dịch chuyển của đổ bóng
                   textShadowRadius: 1, // Bán kính của đổ bóng
-                  marginLeft: "45%",
+                  marginLeft:100,
                   marginTop: 10,
                 },
               }}
